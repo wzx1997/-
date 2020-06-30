@@ -1,0 +1,13 @@
+test_login:
+  test_login1:
+     account: "itheima_test"
+     password: "itheima"
+     toast: Null
+  test_login2:
+     account: "13672196835"
+     password: "wzx1997"
+     toast: "登录密码错误"
+  test_login3:
+     account: "13672166835"
+     password: "wzx1997"
+     toast: "此用户不存在"

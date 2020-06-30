@@ -1,12 +1,17 @@
 import os
+
 import yaml
 
-def analyze_file(file_name, data_key):
-    with open("." + os.sep + "data" + os.sep + file_name, "r") as f:
-        data = yaml.load(f)
-        dict_data = data[data_key]
-        list_data = list()
-        for i in dict_data.values():
-            list_data.append(i)
 
-        return list_data
+def analyze_file(file_name, key):
+
+    with open(".%sdata%s%s" % (os.sep, os.sep, file_name), "r", encoding="utf-8") as f:
+        case_data = yaml.load(f)[key]
+
+        data_list = list()
+        for i in case_data.values():
+            data_list.append(i)
+
+        return data_list
+
+
